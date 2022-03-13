@@ -4,12 +4,12 @@ import pygame as pg
 class Sound:
     def __init__(self):
         pg.mixer.init()
-        self.alien_phaser = pg.mixer.Sound('sounds/alien_phaser.wav')
-        self.ship_photon = pg.mixer.Sound('sounds/ship_photon.wav')
+        self.alien_phaser = pg.mixer.Sound('game_sounds/alien_phaser.wav')
+        self.ship_photon = pg.mixer.Sound('game_sounds/ship_photon.wav')
         self.alien_explosion = pg.mixer.Sound('game_sounds/mortar_cannon.wav')
-        self.ship_explosion = pg.mixer.Sound('sounds/ship_explosion.wav')
-        self.end_theme = pg.mixer.Sound('sounds/star_trek_end_theme.wav')
-        self.ufo = pg.mixer.Sound('sounds/star_trek_ufo.wav')
+        self.ship_explosion = pg.mixer.Sound('game_sounds/ship_explosion.wav')
+        self.end_theme = pg.mixer.Sound('game_sounds/star_trek_end_theme.wav')
+        self.ufo = pg.mixer.Sound('game_sounds/star_trek_ufo.wav')
 
     def play_music(self, music, volume=0.3):
         pg.mixer.music.unload()            # stop previous music playing before beginning another
