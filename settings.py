@@ -32,10 +32,10 @@ class Settings:
         # )
         # label.place(x=0, y=0)
 
-        # self.laser_speed_factor = 3
-        # self.laser_width = 3
-        # self.laser_height = 15
-        # self.laser_color = 255, 0, 0
+        self.laser_speed_factor = 3
+        self.laser_width = 3
+        self.laser_height = 15
+        self.laser_color = 255, 0, 0
         
         # ws = Tk()
         # ws.title('Space Invaders')
