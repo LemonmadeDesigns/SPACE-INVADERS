@@ -1,12 +1,6 @@
 import pygame as pg
-from vector import Vector
 from pygame.sprite import Sprite, Group
-from copy import copy
-from random import randint
 from timer import CommandTimer
-# from alien import Alien
-# from stats import Stats
-
 
 class Barriers:
     def __init__(self, game):

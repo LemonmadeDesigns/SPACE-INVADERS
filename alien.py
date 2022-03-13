@@ -5,15 +5,15 @@ from timer import Timer
 from sound import Sound
 from random import randint
 
-
-
 class AlienFleet:
-    
+    # EXPLOSION IMAGES
     alien_exploding_images = [pg.image.load(f'images/rainbow_explode{n}.png') for n in range(8)]
    
+    # ALIEN SHIP IMAGES
     ufo_imgs = [pg.transform.rotozoom(pg.image.load(
         f'game_images/alien_ship/alien_ship_{n}.png'), 0, 0.5) for n in range(2)]
     
+    # LOOPS THROUGH THE ALIEN WALKING IMAGES
     alien_images = [[pg.transform.rotozoom(pg.image.load(
         f'game_images/aliens/alien_walk_{m}{n}.png'), 0, 0.5) for n in range(2)] for m in range(3)]
     alien_images.append(ufo_imgs)
@@ -45,8 +45,7 @@ class AlienFleet:
         x = self.alien_w * (1.2 * col + 1)
         y = self.alien_h * (1.2 * row + 1)
         images = AlienFleet.alien_images
-        # alien = Alien(game=self.game, ul=(x, y), v=self.v, image_list=images, 
-        #               start_index=randint(0, len(images) - 1))
+ 
         alien = Alien(game=self.game, sound=self.sound, alien_index = row // 2, ul=(x, y), v=self.v, image_list=images)
         self.fleet.add(alien)
 
@@ -94,7 +93,7 @@ class AlienFleet:
 
 class Alien(Sprite):
     def __init__(self, game, image_list, alien_index, sound, start_index=0, ul=(0, 100), v=Vector(1, 0),
-                 points=1211):
+                points=1211):
         super().__init__()
         self.game = game
         self.screen = game.screen
@@ -139,10 +138,10 @@ class Alien(Sprite):
         self.rect.x, self.rect.y = self.ul.x, self.ul.y
 
     def draw(self):  
-      image = self.timer.image()
-      rect = image.get_rect()
-      rect.x, rect.y = self.rect.x, self.rect.y
-      self.screen.blit(image, rect)
-      # self.screen.blit(self.image, self.rect)
+        image = self.timer.image()
+        rect = image.get_rect()
+        rect.x, rect.y = self.rect.x, self.rect.y
+        self.screen.blit(image, rect)
+        # self.screen.blit(self.image, self.rect)
 
       

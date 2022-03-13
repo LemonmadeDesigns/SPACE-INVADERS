@@ -1,14 +1,10 @@
 import pygame as pg
-
 import alien
+
 from vector import Vector
 from pygame.sprite import Sprite, Group
 from copy import copy
 from random import randint
-from sound import Sound
-# from alien import Alien
-# from stats import Stats
-
 
 class Lasers:
     def __init__(self, game, owner):

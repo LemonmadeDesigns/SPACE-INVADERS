@@ -2,7 +2,6 @@ import pygame as pg
 from pygame.sprite import Group
 from ship import Ship
 
-
 YELLOW = (255, 255, 0)
 
 class SbElement:

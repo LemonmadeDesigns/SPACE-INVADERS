@@ -1,7 +1,8 @@
 import pygame as pg
+import game_functions as gf
+
 from landing_page import LandingPage
 from sys import exit
-import game_functions as gf
 from time import sleep
 from stats import Stats
 from scoreboard import Scoreboard
@@ -11,10 +12,8 @@ from alien import AlienFleet
 from settings import Settings
 from sound import Sound
 
-
 class Game:
     RED = (255, 0, 0)
-
 
     def __init__(self):
         pg.init()
@@ -28,8 +27,7 @@ class Game:
         pg.display.set_caption("Alien Invasion")
         self.ship = Ship(game=self)
         self.alien_fleet = AlienFleet(game=self)
-        self.lasers = Lasers(game=self, owner=self.ship)                  # for ship lasers
-        # self.alien_lasers = Lasers(game=self, owner=self.alien_fleet)   # for alien lasers
+        self.lasers = Lasers(game=self, owner=self.ship)   # for ship lasers
         self.ship.set_alien_fleet(self.alien_fleet)
         self.ship.set_lasers(self.lasers)
 

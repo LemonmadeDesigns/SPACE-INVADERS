@@ -1,8 +1,6 @@
 from vector import Vector
 from tkinter import *
 
-
-
 class Settings:
     
     def __init__(self):
@@ -49,7 +47,3 @@ class Settings:
         # label.place(x=0, y=0)
 
         # ws.mainloop()
-
-       
-
-

@@ -1,6 +1,5 @@
 import pygame as pg
 
-
 class Sound:
     def __init__(self):
         pg.mixer.init()
@@ -37,5 +36,3 @@ class Sound:
     def play_ship_explosion(self):
         pg.mixer.stop()
         self.play_sound(self.ship_explosion)
-
-

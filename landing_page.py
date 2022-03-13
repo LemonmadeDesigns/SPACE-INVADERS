@@ -1,10 +1,10 @@
-# from decimal import HAVE_CONTEXTVAR
-# import imghdr
 import pygame as pg
 import sys
 from alien import Alien
 from vector import Vector
 from button import Button
+
+# USE FOR BACKGROUND IMAGE
 from sound import Sound
 from settings import Settings
 
@@ -60,15 +60,14 @@ class LandingPage:
             ('= 20 PTS', GREY, font),
             ('= 10 PTS', GREY, font), 
             (f'HIGH SCORE = {self.highscore:,}', GREY, font),
-               # ('PLAY GAME', GREEN, font), 
+            # ('PLAY GAME', GREEN, font), 
         ]
 
         self.texts = [self.get_text(msg=s[0], color=s[1], font=s[2]) for s in strings]
 
         self.posns = [150, 230]
         alien = [65 * x + 350 for x in range(4)]
-        # play_high = [x for x in range(650, 760, 80)]
-        # play_high = 730
+   
         self.posns.extend(alien)
         self.posns.append(730)
 
@@ -141,8 +140,9 @@ class LandingPage:
         self.ufo.draw()
         self.draw_text()
         self.play_button.draw()
+        
         # self.alien_fleet.draw()   # TODO draw my aliens
         # self.lasers.draw()        # TODO dray my button and handle mouse events
-        pg.display.flip()
         
+        pg.display.flip()
         

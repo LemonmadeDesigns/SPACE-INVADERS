@@ -1,7 +1,7 @@
 import pygame as pg
 
-
 class Timer:
+  
   def __init__(self, image_list, start_index=0, delay=100, is_loop=True): 
     self.image_list = image_list
     self.start_index = start_index
@@ -10,7 +10,6 @@ class Timer:
     self.last_time_switched = pg.time.get_ticks()
     self.frames = len(image_list)
     self.index = start_index if start_index < len(image_list) - 1 else 0
-
     
   def next_frame(self): 
     # if a one-pass timer that has finished
@@ -34,6 +33,7 @@ class Timer:
 class CommandTimer(Timer):
   def __init__(self, image_list, start_index=0, delay=100, is_loop=True): 
     super().__init__(image_list, start_index, delay, is_loop)
+
 
 def next_frame(self): 
       # if a one-pass timer that has finished

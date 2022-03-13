@@ -1,9 +1,10 @@
 import pygame as pg
 from vector import Vector
 from timer import Timer
-from pygame.sprite import Sprite, Group
-from sound import Sound
+from pygame.sprite import Sprite
 
+# USE WHEN I CREATE SHIP/SOUND FOR SHIP
+from sound import Sound
 
 class Ship(Sprite):
   exploding_images = [pg.image.load(f'images/explode{n}.png') for n in range(8)]
